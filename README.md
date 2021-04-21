@@ -1,7 +1,18 @@
 ## 1.添加依赖
 
 ```xml
+	<repositories>
+        <repository>
+            <id>jitpack.io</id>
+            <url>https://jitpack.io</url>
+        </repository>
+    </repositories>
 
+ 		<dependency>
+            <groupId>com.fengxu.fxhttp</groupId>
+            <artifactId>fxhttp.spring.boot.starter</artifactId>
+            <version>0.2.2</version>
+        </dependency>
 ```
 
 
