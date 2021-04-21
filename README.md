@@ -1,19 +1,21 @@
 ## 1.添加依赖
 
 ```xml
-	<repositories>
-        <repository>
-            <id>jitpack.io</id>
-            <url>https://jitpack.io</url>
-        </repository>
-    </repositories>
+<repositories>
+	<repository>
+		<id>jitpack.io</id>
+		<url>https://jitpack.io</url>
+	</repository>
+</repositories>
 
- 		<dependency>
-            <groupId>com.fengxu.fxhttp</groupId>
-            <artifactId>fxhttp.spring.boot.starter</artifactId>
-            <version>0.2.2</version>
-        </dependency>
+<dependency>
+	<groupId>com.fengxu.fxhttp</groupId>
+	<artifactId>fxhttp.spring.boot.starter</artifactId>
+	<version>0.2.2</version>
+</dependency>
 ```
+
+
 
 
 
@@ -74,7 +76,7 @@ public class TestController {
 }
 ```
 
-注意：因为该代理是动态生成的，所以在注册bean时，spring并不能准确识别到依赖，所以这里一定要使用@Lazy,而@SuppressWarnings("all")是因为spring容器扫描不到该类，idea回爆红，加上这个就不会爆红了！
+注意：因为该代理是动态生成的，所以在注册bean时，spring并不能准确识别到依赖，所以这里一定要使用@Lazy,而@SuppressWarnings("all")是因为spring容器扫描不到该类，idea会爆红，加上这个就不会爆红了！
 
 这里的变量名不用和yml文件中配置的一样！
 
