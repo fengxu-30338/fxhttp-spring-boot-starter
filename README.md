@@ -9,7 +9,7 @@
 </repositories>
 
 <dependency>
-	<groupId>com.fengxu.fxhttp</groupId>
+	<groupId>com.github.fengxu-30338</groupId>
 	<artifactId>fxhttp.spring.boot.starter</artifactId>
 	<version>0.2.2</version>
 </dependency>
