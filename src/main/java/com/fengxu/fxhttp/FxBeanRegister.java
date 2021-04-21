@@ -3,14 +3,12 @@ package com.fengxu.fxhttp;
 import com.fengxu.http.proxy.FxHttpInterceptor;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.support.DefaultListableBeanFactory;
-import org.springframework.stereotype.Component;
 import java.lang.reflect.Method;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
 import java.util.regex.Pattern;
 
-@Component
 class FxBeanRegister {
 
     @Autowired
