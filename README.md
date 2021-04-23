@@ -171,11 +171,27 @@ fxhttp:
 
 
 
+**自动注入**
+
+```java
+ 	@Autowired
+    private UserHttp userHttp;
+
+    @RequestMapping("/")
+    public Object test(){
+        return userHttp.getNotice();
+    }
+```
+
+
+
+
+
 **@FxHttpInterface属性**
 
 | 属性名   | 含义                                               |
 | -------- | -------------------------------------------------- |
 | value    | 注入到容器中的bean名称，若没有配置则默认首字母小写 |
 | baseUrl  | 该接口对应的基础url                                |
-| startLog | 是否开启日志: false                                |
+| startLog | 是否开启日志: 默认false                            |
 
