@@ -1,4 +1,4 @@
-package com.fengxu.fxhttp;
+package com.fengxu.fxhttp.annotation;
 
 import org.springframework.stereotype.Component;
 

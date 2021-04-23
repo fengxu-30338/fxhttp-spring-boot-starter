@@ -1,7 +1,6 @@
 package com.fengxu.fxhttp;
 
 import com.fengxu.http.proxy.FxHttpInterceptor;
-import com.fengxu.http.proxy.FxHttpMain;
 import org.springframework.boot.context.properties.ConfigurationProperties;
 
 import java.util.LinkedHashMap;
@@ -16,12 +15,23 @@ public class FxhttpConfigProperties {
     // http接口标识(beanName)，该接口的属性
     private Map<String,HttpProxyProps> httpProxy;
 
+    // 注解形式配置的接口存在的基本包
+    private String basePackage;
+
     public Map<String, HttpProxyProps> getHttpProxy() {
         return httpProxy;
     }
 
     public void setHttpProxy(Map<String, HttpProxyProps> httpProxy) {
         this.httpProxy = httpProxy;
+    }
+
+    public String getBasePackage() {
+        return basePackage;
+    }
+
+    public void setBasePackage(String basePackage) {
+        this.basePackage = basePackage;
     }
 
     public static class HttpProxyProps{
@@ -62,25 +72,6 @@ public class FxhttpConfigProperties {
             return patternMap;
         }
 
-        /**
-         * 生成代理
-         * @return 代理对象
-         */
-        public Object generatorProxy(){
-            Class<?> targetClass;
-            try {
-                targetClass = Class.forName(className);
-            } catch (ClassNotFoundException e) {
-                throw new RuntimeException("未找到"+className+"目标类!");
-            }
-            FxHttpMain.Builder builder = new FxHttpMain.Builder()
-                    .baseUrl(baseUrl)
-                    .startLog(startLog);
-            for (Map.Entry<List<Pattern>, Consumer<FxHttpInterceptor>> entry : patternMap.entrySet()) {
-                builder.addInterceptor(entry.getValue(),entry.getKey().toArray(new Pattern[0]));
-            }
-            return builder.build(targetClass);
-        }
     }
 
 }

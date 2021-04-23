@@ -4,7 +4,7 @@
     <modelVersion>4.0.0</modelVersion>
     <groupId>com.fengxu.fxhttp</groupId>
     <artifactId>fxhttp.spring.boot.starter</artifactId>
-    <version>0.2.2</version>
+    <version>0.2.2.1</version>
     <name>fxhttp</name>
     <description>fxhttp project for Spring Boot Starter</description>
 
