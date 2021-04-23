@@ -74,7 +74,7 @@ fxhttp:
   base-package: com.test.http # 配置接口所在的基本包
 ```
 
-虽然还是可以使用，yml的方式配置接口属性，但是还是建议使用基本包+@FxHttpInterface的方式配置!
+虽然还可以使用yml的方式配置接口属性，但是还是建议使用基本包+@FxHttpInterface的方式配置!
 
 
 
